@@ -1,6 +1,6 @@
 # Defined in - @ line 1
-{{- if (eq .chezmoi.osRelease.idLike "ubuntu debian") -}}
+{{if (eq .chezmoi.osRelease.idLike "ubuntu debian") -}}
 function apt --description 'alias apt=sudo apt-fast'
     sudo apt-fast $argv
 end
-{{- end -}}
+{{- end}}
