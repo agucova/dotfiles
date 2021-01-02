@@ -1,0 +1,59 @@
+if status --is-interactive
+    neofetch --gpu_type dedicated --gpu_brand off --os_arch off --disable icons uptime host wm resolution
+    # Spotify Status
+    #      if test (spotifycli --playbackstatus 2>&1) =  "▶"
+    #            echo ""
+    #            echo "  ▶  Currently playing:" (spotifycli --status)
+    #            echo ""
+    #      end
+    #      echo \n
+end
+
+# Starship
+eval (starship init fish)
+
+# Micro and full Unicode
+set -gx EDITOR "micro"
+set -gx LANG en_US.UTF-8
+
+{{ if (eq .chezmoi.os "darwin") -}}
+# iTerm2
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+{{- end}}
+
+# Flask Development
+set -gx FLASK_ENV "development"
+
+{{ if (eq .chezmoi.os "linux") -}}
+# Python3
+set -gx LDFLAGS "-L/usr/local/opt/python@3.8/lib"
+set -gx PKG_CONFIG_PATH "/usr/local/opt/python@3.8/lib/pkgconfig"
+{{- end}}
+
+{{ if (eq .chezmoi.os "darwin") -}}
+# PostgreSQL
+set -gx DATABASE_URL postgres://(whoami)
+{{- end}}
+
+# fzf using fd as a backend
+set FZF_DEFAULT_COMMAND 'fd --type file'
+set FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+
+# Rust
+source $HOME/.cargo/env
+
+{{ if (eq .chezmoi.os "linux") -}}
+# Linuxbrew
+set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
+set -gx HOMEBREW_CELLAR "/home/linuxbrew/.linuxbrew/Cellar"
+set -gx HOMEBREW_REPOSITORY "/home/linuxbrew/.linuxbrew/Homebrew"
+set -q PATH; or set PATH ''
+set -gx PATH "/home/linuxbrew/.linuxbrew/bin" "/home/linuxbrew/.linuxbrew/sbin" $PATH
+set -q MANPATH; or set MANPATH ''
+set -gx MANPATH "/home/linuxbrew/.linuxbrew/share/man" $MANPATH
+set -q INFOPATH; or set INFOPATH ''
+set -gx INFOPATH "/home/linuxbrew/.linuxbrew/share/info" $INFOPATH
+{{- end}}
+
+# Fuck
+thefuck --alias | source

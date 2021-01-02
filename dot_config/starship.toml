@@ -1,0 +1,20 @@
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "💀"
+
+[[battery.display]]
+threshold = 25
+style = "bold red"
+
+[character]
+symbol = "➜"
+error_symbol = "✗"
+use_symbol_for_status = true
+
+[cmd_duration]
+min_time = 500
+prefix = "took "
+
+[python]
+python_binary = "python3"

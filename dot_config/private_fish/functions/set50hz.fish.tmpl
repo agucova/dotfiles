@@ -1,0 +1,11 @@
+# Defined in - @ line 1
+{{- if (eq .chezmoi.osRelease.idLike "ubuntu debian") -}}
+function set50hz --wraps='v4l2-ctl -d /dev/video0 --set-ctrl power_line_frequency=1' --description 'alias set50hz v4l2-ctl -d /dev/video0 --set-ctrl power_line_frequency=1'
+    if test "$argv" = ""
+        v4l2-ctl --list-devices
+    else
+        v4l2-ctl -d $argv --set-ctrl power_line_frequency=1
+        echo "Ran: v4l2-ctl -d $argv --set-ctrl power_line_frequency=1;"
+    end
+end
+{{- end -}}
