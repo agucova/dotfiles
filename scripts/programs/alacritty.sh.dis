@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "Please manually install alacritty with a ligatures patch"
+# which alacritty &> /dev/null
+# if [ $? -ne 0 ]; then
+#     echo "Installing: alacritty..."
+#    curl https://sh.rustup.rs -sSf | sh -s -- -y # Install rust
+#     $HOME/.cargo/bin/cargo install cargo-deb > /dev/null
+#     $HOME/.cargo/bin/cargo deb --install -p alacritty > /dev/null
+# else
+#     echo "Already installed: alacritty"
+# fi

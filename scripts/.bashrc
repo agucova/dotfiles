@@ -1,0 +1,1 @@
+export PATH=/home/agucova/.nimble/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/agucova/.cargo/bin:/usr/local/opt/python@3.8/bin:/Users/agucova/Library/Python/3.8/bin:/snap/bin:/home/agucova/.bin:/usr/local/sbin:/home/agucova/.nimble/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games

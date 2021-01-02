@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+VSINSTALLED=$(code --list-extensions)
+function vsinstall {
+  if ! grep -i -q "${1}" <<< "${VSINSTALLED}"; then
+    echo "Installing: ${1}..."
+    code --install-extension "${1}" > /dev/null
+  else
+    echo "Already installed: ${1}"
+  fi
+}
+
+vsinstall ms-python.python
+vsinstall esbenp.prettier-vscode
+vsinstall timonwong.shellcheck
+vsinstall redhat.vscode-yaml
+vsinstall kosz78.nim
+vsinstall equinusocio.vsc-material-theme-icons
+vsinstall equinusocio.vsc-material-theme
+vsinstall magicstack.magicpython
+vsinstall james-yu.latex-workshop
+vsinstall bmalehorn.vscode-fish
+vsinstall equinusocio.vsc-community-material-theme
+vsinstall xaver.clang-format
+vsinstall ms-vscode.cpptools

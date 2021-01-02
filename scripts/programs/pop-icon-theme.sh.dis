@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ $(dpkg-query -W -f='${Status}' pop-icon-theme 2>/dev/null | grep -c "ok installed") -eq 0 ]; then
+    echo "Installing: pop-icon-theme..."
+    sudo add-apt-repository -y -u ppa:system76/pop > /dev/null
+    sudo apt-fast -y install pop-icon-theme > /dev/null
+else
+    echo "Already installed: pop-icon-theme"
+fi
