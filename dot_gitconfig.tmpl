@@ -1,3 +1,5 @@
+{{- $codespaces:= env "CODESPACES" | not | not -}}
+{{- if not $codespaces }}
 [commit]
 	gpgsign = true
 [user]
@@ -8,3 +10,4 @@
 	tool = meld
 [diff]
 	guitool = meld
+{{- end }}
