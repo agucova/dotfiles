@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export GOBIN:/home/agucova/\x2ego/bin
+SETUVAR --export --path GOPATH:/home/agucova/\x2ego
 SETUVAR --export GRB_LICENSE_FILE:/home/agucova/\x2egurobi/gurobi\x2elic
 SETUVAR --export GUROBI_HOME:/opt/gurobi911/linux64/
 SETUVAR --export --path LD_LIBRARY_PATH:\x1e/opt/gurobi911/linux64/lib\x1e/opt/gurobi911/linux64//lib
