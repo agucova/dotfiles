@@ -39,8 +39,6 @@ set -gx DATABASE_URL postgres://(whoami)
 set FZF_DEFAULT_COMMAND 'fd --type file'
 set FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
-# Rust
-source $HOME/.cargo/env
 
 {{ if (eq .chezmoi.os "linux") -}}
 # Linuxbrew

@@ -1,5 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export GRB_LICENSE_FILE:/home/agucova/\x2egurobi/gurobi\x2elic
+SETUVAR --export GUROBI_HOME:/opt/gurobi911/linux64/
+SETUVAR --export --path LD_LIBRARY_PATH:\x1e/opt/gurobi911/linux64/lib\x1e/opt/gurobi911/linux64//lib
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -30,4 +33,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/agucova/go/bin/\x1e/snap/bin\x1e/usr/local/opt/python\x403\x2e8/bin\x1e/home/agucova/\x2epoetry/bin\x1e/home/agucova/\x2enimble/bin\x1e/home/agucova/\x2ebin\x1e/usr/local/sbin\x1e/home/agucova/\x2epoetry/bin\x1e/usr/local/opt/python\x403\x2e8/bin\x1e/snap/bin\x1e/home/agucova/\x2enimble/bin\x1e/home/agucova/\x2ebin\x1e/usr/local/sbin
+SETUVAR fish_user_paths:/home/agucova/repos/flutter/bin\x1e/home/agucova/\x2ecargo/bin\x1e/opt/gurobi911/linux64/bin\x1e/opt/gurobi911/linux64\x1e/home/agucova/\x2ebin/firefox\x1e/home/agucova/\x2ebin/v\x1e/home/agucova/Downloads/nanopb\x2d0\x2e4\x2e4\x2dlinux\x2dx86/generator\x2dbin\x1e/home/agucova/repos/EmbeddedProto/protoc\x2dgen\x2deams\x1e/home/agucova/go/bin/\x1e/snap/bin\x1e/usr/local/opt/python\x403\x2e8/bin\x1e/home/agucova/\x2epoetry/bin\x1e/home/agucova/\x2enimble/bin\x1e/home/agucova/\x2ebin\x1e/usr/local/sbin
